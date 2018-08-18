@@ -1,16 +1,16 @@
 //打开数据库
-$("#inputDate").click(function(){
-  $.ajax({
-      type:"post",
-      url:"1.php",
-      success:function(date){
-          alert("success");
-          d = json.parse(date);
-          console.log(d);
-          $("h1").html(d);
-      }
-  });
-})
+    $("#inputDate").click(function(){
+    $.ajax({
+        type:"post",
+        url:"1.php",
+        success:function(date){
+            alert("success");
+            d = JSON.parse(date);
+            console.log(d);
+            $("h1").html(d);
+        }
+    });
+    })
 
 //打开数据库
 /* function addData() {
