@@ -2,7 +2,7 @@
 $("#inputDate").click(function(){
   $.ajax({
       type:"post",
-      url:"/php/1.php",
+      url:"1.php",
       success:function(date){
           alert("success");
           d = json.parse(date);
