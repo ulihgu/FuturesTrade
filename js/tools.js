@@ -1,5 +1,16 @@
+$("#inputDate").click(function(){
+    $.ajax({
+        type:"post",
+        url:"01.php",
+        //data:{},
+        // success成功接收到数据后触发
+        success:function(data){
+            console.log(data);
+        }
+    });
+})
 //打开数据库
-function addData() {
+/* function addData() {
     var html5sql = openDatabase('FT', 'stock', 5 * 1024 * 1024, function () {
         console.log('打开数据库成功');
         alert(html5sql+"打开数据库成功");
@@ -11,7 +22,7 @@ function addData() {
          var total = '3088';
          var point = '40';
          console.log('打开成功:' + SQL_INSERT);
-         /*  html5sql.process([{
+           html5sql.process([{
              'sql': SQL_INSERT,
              'data': [date, total,point]
          }], function () {
@@ -20,9 +31,9 @@ function addData() {
          }, function () {
              console.log('插入数据失败');
              failureCallback();
-         }) */
+         }) 
     })      
-}
+} */
 //1 数据库存取
 //1.1执行语句
 /* var SQL_TABLE = 'DROP TABLE IF EXISTS taskList;CREATE TABLE taskList (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, title TEXT);';
