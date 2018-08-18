@@ -1,33 +1,28 @@
 //打开数据库
 function addData() {
-    var html5sql = openDatabase('/db/FT.db', 'stock', 5 * 1024 * 1024, function () {
+    var html5sql = openDatabase('FT', 'stock', 5 * 1024 * 1024, function () {
         console.log('打开数据库成功');
         alert(html5sql+"打开数据库成功");
-    })
-    if (html5sql) {
+
         var inputdate = document.getElementById("inputDate");
-            SQL_INSERT = 'INSERT INTO stock(date, total,point) VALUES(?,?,?);';
-            //插入数据
-            var date = '2016年11月10日';
-            var total = '3088';
-            var point = '40';
-            console.log('打开成功:' + SQL_INSERT);
-            /*  html5sql.process([{
-                'sql': SQL_INSERT,
-                'data': [date, total,point]
-            }], function () {
-                console.log('插入数据成功');
-                successCallback();
-            }, function () {
-                console.log('插入数据失败');
-                failureCallback();
-            }) */
-      } else {
-        console.log('打开失败！');
-    }
+        var SQL_INSERT = 'INSERT INTO stock(date, total,point) VALUES(?,?,?);';
+         //插入数据
+         var date = '2016年11月10日';
+         var total = '3088';
+         var point = '40';
+         console.log('打开成功:' + SQL_INSERT);
+         /*  html5sql.process([{
+             'sql': SQL_INSERT,
+             'data': [date, total,point]
+         }], function () {
+             console.log('插入数据成功');
+             successCallback();
+         }, function () {
+             console.log('插入数据失败');
+             failureCallback();
+         }) */
+    })      
 }
-
-
 //1 数据库存取
 //1.1执行语句
 /* var SQL_TABLE = 'DROP TABLE IF EXISTS taskList;CREATE TABLE taskList (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, title TEXT);';
